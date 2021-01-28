@@ -1,0 +1,39 @@
+.missionContainer{
+    //padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .missionName{
+        color: #62689F;
+        font-weight: bold;
+        padding: 10px 0px;
+    }
+
+    .imgContainer {
+        display: flex;
+        justify-content: center;
+        background: #F2F2F2;
+        padding: 10px;
+    
+        img{
+            // height: 40px;
+            // width: 40px;
+            width: 50%;
+        }
+    }
+
+    .list{
+        .heading{
+            font-size: 16px;
+            padding: 5px 0px;
+            display: flex;
+            :first-child{
+                color: #000000 !important;
+                flex: 1;
+            }
+            span{
+                color: #62689F;
+            }
+        }
+    }
+}

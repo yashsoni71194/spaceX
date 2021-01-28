@@ -1,0 +1,47 @@
+
+<p><b>SpaceX Launch Programs</b></p>
+<div class="homeContainer" *ngIf="!isLoading">
+        
+        <div class="filterContainer">
+            <div class="filter1">
+                <div class="head">Launch Year</div>
+                <div class="yearContainer">
+                    <div *ngFor="let year of launchYears">
+                        <span class="year yearFor" [ngClass]="{'selected':filter['launch_year'] === year}" (click)="setYear(year)" >{{year}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="filter2">
+                <div class="head">Successful Launch</div>
+                <div class="launchContainer">
+                    <div (click)="setSuccessfulLaunch(true)" [ngClass]="{'selected':filter['launch_success'] == true}">True</div>
+                    <div (click)="setSuccessfulLaunch(false)" [ngClass]="{'selected':filter['launch_success'] == false}">False</div>
+                </div>
+            </div>
+            <div class="filter3">
+                <div class="head">Successful Landing</div>
+                <div class="landingContainer">
+                    <div (click)="setSuccessfulLand(true)" [ngClass]="{'selected':filter['land_success'] == true}">True</div>
+                    <div (click)="setSuccessfulLand(false)" [ngClass]="{'selected':filter['land_success'] == false}">False</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="listContainer" *ngIf="missions.length">
+            <div *ngFor="let mission of missions" class="missionngFor">
+                <app-mission-detail [mission]="mission"></app-mission-detail>
+            </div>
+        </div>
+
+        <div class="updateLoading" *ngIf="!missions.length && isUpdateLoading">
+            <div>Fetching Results....</div>
+        </div>
+
+        <div *ngIf="!missions.length && !isUpdateLoading" class="noResult">
+            <div>Oops No results found..</div>
+        </div>
+</div>
+
+<div *ngIf="isLoading">
+        Fetching missions...
+</div>

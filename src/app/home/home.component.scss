@@ -1,0 +1,162 @@
+
+.homeContainer{
+    display: flex;
+
+    .filterContainer{
+        width: 20%;
+        //border: 1px solid black;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 10px;
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: flex-start;
+        .filter1{
+            .head{
+                text-decoration: underline;
+                font-weight: bold;
+                text-align: center;
+                margin: 10px 0px;
+            }
+        .yearContainer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .yearFor{
+                padding: 5px 25px;
+                //width: 40%;
+                display: flex;
+                justify-content: center;
+                margin: 10px;
+                color: #000000;
+                background: #C4E09C;
+                border-radius: 10px;
+                cursor: pointer;
+                .year{
+
+                }
+            }
+        }}
+        .filter2{
+            width: 100%;
+            .head{
+                text-decoration: underline;
+                font-weight: bold;
+                text-align: center;
+                margin: 10px 0px;
+            }
+            .launchContainer{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                div{
+                //width: 40%;
+                display: flex;
+                justify-content: center;
+                margin: 10px;
+                padding: 5px 25px;
+                color: #000000;
+                background: #C4E09C;
+                cursor: pointer;
+                border-radius: 10px;
+                }
+            }
+        }
+        .filter3{
+            width: 100%;
+            .head{
+                text-decoration: underline;
+                font-weight: bold;
+                text-align: center;
+                margin: 10px 0px;
+            }
+            .landingContainer{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                div{
+                //width: 40%;
+                display: flex;
+                justify-content: center;
+                margin: 10px;
+                padding: 5px 25px;
+                color: #000000;
+                background: #C4E09C;
+                border-radius: 10px;
+                cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+    .listContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    .missionngFor{
+        display: flex;     
+        padding: 10px;
+        //border: 1px solid black;
+        border-radius: 5px;
+        width: 200px;
+        height: 400px;
+        margin: 5px;
+        background: #FFFFFF;
+    }
+    }
+}
+
+.selected{
+    background: #7CBA01 !important;
+    font-weight: bold;
+}
+
+.noResult{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.updateLoading{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+    .homeContainer{
+        display: flex;
+        flex-direction: column !important;
+    
+        .filterContainer{
+            width: unset !important;
+
+            .yearFor{
+               padding: 5px 45px !important;
+            }
+            .launchContainer div{
+                padding: 5px 45px !important;
+            }
+            .landingContainer div{
+                padding: 5px 45px !important;
+            }
+        }
+        .listContainer{
+            width: unset !important;
+            justify-content: center !important;
+
+            .missionngFor{
+                width: unset !important;
+            }
+        }
+    }
+
+}
